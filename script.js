@@ -284,13 +284,14 @@ let runAnalysis = () => {
 };
 
 document
-  .getElementsById("algorithmSelect")
+  .getElementById("algorithmSelect")
   .addEventListener("change", updateAlgorithmInfo);
 document.getElementById("drugInput").addEventListener("keypress", (e) => {
   if (e.key == "Enter") {
     runAnalysis();
   }
 });
+document.getElementById("runBtn").addEventListener("click",runAnalysis);
 window.onload = () => {
   initializeNetwork();
   updateAlgorithmInfo();
