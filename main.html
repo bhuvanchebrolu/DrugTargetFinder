@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug target Finder</title>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.24.1/cytoscape.min.js"></script>
+
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fa-solid fa-dna"></i>Drug Target Finder</h1>
+            <p>Pathway Search in Biological Networks using Graph Algorithms</p>
+        </div>
+        <div id="flash" class="hidden" ></div>
+        <div class="main-content">
+            <div class="control-panel">
+                <h3>Search Parameters</h3>
+                <div class="input-group">
+                    <label for="drugInput">Drug Name:</label>
+                    <input type="text" id="drugInput" placeholder="Enter drug name (e.g., Aspirin)">
+                </div>
+                <div class="input-group">
+                    <label for="algorithmSelect">Algorithms</label>
+                    <select id="algorithmSelect">
+                        <option value="bfs">BFS - Breadth First Search</option>
+                        <option value="dijkstra">Dijkstra's Shortest Path</option>
+                        <option value="topological">Topological Sort</option>
+                    </select>
+                </div>
+                <button class="run-button" onclick="runAnalysis()"><i class="fa-brands fa-searchengin"></i> Run Analysis</button>
+                <div id="algorithmInfo"  class="algorithm-info">
+                    <h5>BFS - Breadth First Search</h5>
+                    <p>Finds all proteins influenced by the drug target, exploring layer by layer to show the complete pathway spread.</p>
+                </div>
+                <div class="results" id="resultsPanel" style="display: none;">
+                    <h4>Analysis Results</h4>
+                    <div class="stats" id="stats"></div>
+                    <div class="pathway" id="pathwayResults"></div>
+                </div>
+
+            </div>
+            <div class="visualization">
+                <div id="network"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
