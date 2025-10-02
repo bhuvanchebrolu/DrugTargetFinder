@@ -52,7 +52,7 @@ body {
 }
 .main-content {
   display: grid;
-  grid-template-columns: 350px 1fr;
+  grid-template-columns: 400px 1fr;
   gap: 20px;
   height: 80vh;
 }
@@ -70,7 +70,39 @@ body {
   margin-bottom: 20px;
   font-size: 1.3rem;
 }
+.overallBtn {
+  display: flex;
+  justify-content: space-around;
+  width:100%;
 
+}
+
+
+
+.validateBtn button {
+  background-color: #0d7c5e;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-bottom: 15px;
+}
+.centralityBtn button{
+  background-color: #0d7c1c;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-bottom: 15px;
+}
 .input-group {
   margin-bottom: 20px;
 }
@@ -158,6 +190,7 @@ body {
 
 .stats {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   margin-bottom: 15px;
 }

@@ -1,5 +1,5 @@
-export const drugDestinationMap={
-  PTGS1: "PDE5A",
+export const drugDestinationMap = {
+  PTGS1: "CYP19A1",
   INSR: "ATP1A1",
   VKORC1: "HMGCR",
   ATP1A1: "ABL1",
@@ -9,7 +9,7 @@ export const drugDestinationMap={
   PDE5A: "HTR2A",
   P2RY12: "ADRB1",
   DRD2: "PTGS2",
-  SLC6A4: "HTR2A",
+  SLC6A4: "PDEA5",
   ESR1: "CYP19A1",
   MS4A1: "PDCD1",
   ABL1: "HTR2A",
@@ -19,5 +19,4 @@ export const drugDestinationMap={
   ATP4A: "ERBB2",
   NR3C1: "HMGCR",
   SERPINC1: "ESR1"
-}
-
+};
